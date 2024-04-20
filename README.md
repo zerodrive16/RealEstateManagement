@@ -2,7 +2,7 @@ Read the instructions in the text file
 -----------------------------------------------------------
 Git Commands
 Get on your local machine
-1. git clone https://github.com/zerodrive16/Real-Estate-Management.git on cmd terminal
+1. git clone https://github.com/zerodrive16/RealEstateManagement.git on cmd terminal
 2. select a folder
 3. open an editor (recommended VSC)
 4. select the folder
