@@ -4,7 +4,7 @@ Git Commands
 Get on your local machine
 1. git clone https://github.com/zerodrive16/RealEstateManagement.git on cmd terminal
 2. select a folder
-3. open an editor (recommended VSC)
+3. open an editor (Intellij)
 4. select the folder
 5. happy coding
 
