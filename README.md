@@ -1,14 +1,5 @@
 Read the instructions in the text file
 -----------------------------------------------------------
-- Install Vscode (https://code.visualstudio.com/)
-
-Extensions: 
-- LiveServer
-
-Nice to have: 
-- HTML CSS Support
-- JavaScript (ES6) code snippets
------------------------------------------------------------
 Git Commands
 Get on your local machine
 1. git clone https://github.com/zerodrive16/Real-Estate-Management.git on cmd terminal
