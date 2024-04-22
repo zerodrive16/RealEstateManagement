@@ -24,10 +24,10 @@ public class MyJDBC {
             // Create a org.example.JDBC.DataStorage object to store the extracted data
             DataStorage dataStorage = new DataStorage();
 
-            // Extract data from the ResultSet and store it in the org.example.JDBC.DataStorage object
+            // Extract data from the ResultSet and store it in the DataStorage object
             dataStorage.extractData(resultSet);
 
-            // Retrieve the extracted data from the org.example.JDBC.DataStorage object
+            // Retrieve the extracted data from the DataStorage object
             ArrayList<String> ids = dataStorage.getIds();
             ArrayList<String> address = dataStorage.getAddress();
 
