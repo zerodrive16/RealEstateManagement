@@ -1,0 +1,43 @@
+package org.example.JDBC;
+
+import org.example.JDBC.DataStorage;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+
+public class MyJDBC {
+    public static void main(String[] args) {
+        try{
+            // Establish a connection to the MySQL database
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/real_estate", "root","123");
+
+            // Create a statement object for executing SQL queries
+            Statement statement = connection.createStatement();
+
+            // Execute a SQL query to select all data from the "apartment" table
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM apartment");
+
+            // Create a org.example.JDBC.DataStorage object to store the extracted data
+            DataStorage dataStorage = new DataStorage();
+
+            // Extract data from the ResultSet and store it in the org.example.JDBC.DataStorage object
+            dataStorage.extractData(resultSet);
+
+            // Retrieve the extracted data from the org.example.JDBC.DataStorage object
+            ArrayList<String> ids = dataStorage.getIds();
+            ArrayList<String> address = dataStorage.getAddress();
+
+            // Iterate over the retrieved data and print it
+            for(int i = 0; i<ids.size(); i++){
+                System.out.println("ID: " + ids.get(i) + " Address: " + address.get(i));
+            }
+
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+}
