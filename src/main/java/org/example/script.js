@@ -1,14 +1,22 @@
-// JavaScript code goes here
 $(document).ready(function() {
+    // select 2 activation
     $('.select2').select2();
 
+    // hide the cards when filter active
     $('#searchButton').on('click', function() {
-        if($('#location').val() || $('#Property-type').val() || $('#Buy/Rent').val() || $('#Rooms').val() || $('#Budget').val()) {
-            $('.card').hide();
+        if($('#location').val() || $('#Property-type').val() || $('#Buy-Rent').val() || $('#Rooms').val() || $('#Budget').val()) {
+            let selLocation = $('#location').val();
+            let regexPattern = new RegExp(selLocation, 'gi');
 
-            var selectedLocation = $('#location').val();
+            $('.card').each(function() {
+                let cardFindTitle = $(this).find('.card-subtitle').text();
 
-            $('.' + selectedLocation.toLowerCase()).show();
+                if(regexPattern.test(cardFindTitle)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            })
         }
     });
 });
