@@ -13,17 +13,11 @@
     background: none;
     color: #333333;
 }
-.btn-primary{
-    background: #333333;
+
+.btn:hover{
+    background-color: #333333;
     border: #333333;
     color: #fff;
-}
-
-.btn-primary:hover{
-    background-color: #fff;
-    border: #333333;
-    border-style: solid;
-    color: #333333;
 }
 .log-in{
     background: none;
@@ -41,7 +35,7 @@
 
 }
 
-.filters_container {
+.main-container {
     background-color: #ffffff95;
     position: relative; /* Move this container up */
     top: -50px; /* Adjust this value to control the overlap */
