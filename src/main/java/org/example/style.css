@@ -1,1 +1,72 @@
 /* CSS Code goes here */
+.navbar{
+    padding-bottom: 20%;
+}
+.navbar .navbar-brand, .nav-link,
+.title_filters, .nav-link:hover,
+.nav-link:focus, .card-body{
+    color: #333333;
+}
+
+
+.btn{
+    background: none;
+    color: #333333;
+}
+.btn-primary{
+    background: #333333;
+    border: #333333;
+    color: #fff;
+}
+
+.btn-primary:hover{
+    background-color: #fff;
+    border: #333333;
+    border-style: solid;
+    color: #333333;
+}
+.log-in{
+    background: none;
+    color: #333333;
+}
+
+.get_started{
+    padding-bottom: 12%;
+}
+.dashboard{
+    background-image: url('pic/background_dashboard.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Establish positioning context */
+
+}
+
+.filters_container {
+    background-color: #ffffff95;
+    position: relative; /* Move this container up */
+    top: -50px; /* Adjust this value to control the overlap */
+    z-index: 10; /* Bring this container to the front */
+}
+
+/* CSS Code goes here */
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.card {
+    width: 68%;
+    margin: 0 1rem 1rem 0;
+}
+.card-descr{
+    padding-bottom:11%
+}
+#filtering-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.filtering-box {
+    width: 18rem;
+    margin: 0 1rem 1rem 0;
+}
