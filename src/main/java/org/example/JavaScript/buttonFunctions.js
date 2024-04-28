@@ -12,7 +12,7 @@ $(document).ready(function() {
             let selectPropertyType = $('#propertyType').val();
             let selectBuyRent = $('#tenureType').val();
             let selectRooms = $('#rooms').val();
-            let selectBudget = $('#budget').val();
+            //let selectBudget = $('#budget').val();
 
             // create the regex pattern
             let regexLocation = new RegExp(selectLocation, 'gi');
@@ -20,10 +20,11 @@ $(document).ready(function() {
             let regexBuyRent = new RegExp(selectBuyRent, 'gi');
             let regexRooms = new RegExp(selectRooms, 'gi');
 
+            /*
             let budgetVal = selectBudget.split(' - ');
             let minBudget = parseInt(budgetVal[0].replace('$', ''));
             let maxBudget = parseInt(budgetVal[1].replace('$', ''));
-
+            */
             $('.card').each(function() {
                 let cardFindLocation = $(this).find('.card-subtitle').text();
                 let cardFindPropertyType = $(this).find('.card-subtitle').text();
@@ -32,11 +33,12 @@ $(document).ready(function() {
 
                 let cardFindBudget = parseInt($(this).find('.card-text').text().replace('$', ''));
 
-                if(!isNaN(minBudget) && !isNaN(maxBudget) && cardFindBudget >= minBudget && cardFindBudget <= maxBudget) {
+                /*
+                if((!isNaN(minBudget) && !isNaN(maxBudget)) && (cardFindBudget >= minBudget && cardFindBudget <= maxBudget)) {
                     $(this).show();
                 } else {
                     $(this).hide();
-                }
+                } */
 
                 if((regexLocation.test(cardFindLocation)) || (regexPropertyType.test(cardFindPropertyType)) || (regexBuyRent.test(cardFindBuyRent)) || (regexRooms.test(cardFindRooms))) {
                     $(this).show();
