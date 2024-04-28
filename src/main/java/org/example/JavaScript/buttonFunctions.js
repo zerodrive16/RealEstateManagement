@@ -31,7 +31,7 @@ $(document).ready(function() {
             let propertyTypeMatch = !selectPropertyType || regexPropertyType.test(cardFindPropertyType);
             let buyRentMatch = !selectBuyRent || regexBuyRent.test(cardFindBuyRent);
             let roomsMatch = !selectRooms || regexRooms.test(cardFindRooms);
-            let budgetMatch = true; // Always true if budget is not selected
+            //let budgetMatch = true; // Always true if budget is not selected
 
             /*if (selectBudget) {
                 let budgetVal = selectBudget.split(' - ');
