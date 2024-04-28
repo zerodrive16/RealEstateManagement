@@ -4,52 +4,55 @@ $(document).ready(function() {
 
     // hide the cards when filter active
     $('#searchButton').on('click', function() {
-        // filter for location
-        if($('#location').val() || $('#propertyType').val() || $('#tenureType').val() || $('#rooms').val() || $('#budget').val()) {
+        // Get selected values from the dropdowns
+        let selectLocation = $('#location').val();
+        let selectPropertyType = $('#propertyType').val();
+        let selectBuyRent = $('#tenureType').val();
+        let selectRooms = $('#rooms').val();
+        //let selectBudget = $('#budget').val();
 
-            // get values
-            let selectLocation = $('#location').val();
-            let selectPropertyType = $('#propertyType').val();
-            let selectBuyRent = $('#tenureType').val();
-            let selectRooms = $('#rooms').val();
-            //let selectBudget = $('#budget').val();
+        // create ReGeX pattern
+        let regexLocation = new RegExp(selectLocation, 'gi');
+        let regexPropertyType = new RegExp(selectPropertyType, 'gi');
+        let regexBuyRent = new RegExp(selectBuyRent, 'gi');
+        let regexRooms = new RegExp(selectRooms, 'gi');
 
-            // create the regex pattern
-            let regexLocation = new RegExp(selectLocation, 'gi');
-            let regexPropertyType = new RegExp(selectPropertyType, 'gi');
-            let regexBuyRent = new RegExp(selectBuyRent, 'gi');
-            let regexRooms = new RegExp(selectRooms, 'gi');
+        // Iterate over each card
+        $('.card').each(function() {
+            let card = $(this);
+            let cardFindLocation = card.find('.card-subtitle').text();
+            let cardFindPropertyType = card.find('.card-subtitle').text();
+            let cardFindBuyRent = card.find('.card-subtitle').text();
+            let cardFindRooms = card.find('.card-text').text();
+            //let cardFindBudget = parseInt(card.find('.card-text').text().replace('$', ''));
 
-            /*
-            let budgetVal = selectBudget.split(' - ');
-            let minBudget = parseInt(budgetVal[0].replace('$', ''));
-            let maxBudget = parseInt(budgetVal[1].replace('$', ''));
-            */
-            $('.card').each(function() {
-                let cardFindLocation = $(this).find('.card-subtitle').text();
-                let cardFindPropertyType = $(this).find('.card-subtitle').text();
-                let cardFindBuyRent = $(this).find('.card-subtitle').text();
-                let cardFindRooms = $(this).find('.card-text').text();
+            // Check if card matches all selected criteria
+            let locationMatch = !selectLocation || regexLocation.test(cardFindLocation);
+            let propertyTypeMatch = !selectPropertyType || regexPropertyType.test(cardFindPropertyType);
+            let buyRentMatch = !selectBuyRent || regexBuyRent.test(cardFindBuyRent);
+            let roomsMatch = !selectRooms || regexRooms.test(cardFindRooms);
+            let budgetMatch = true; // Always true if budget is not selected
 
-                let cardFindBudget = parseInt($(this).find('.card-text').text().replace('$', ''));
+            /*if (selectBudget) {
+                let budgetVal = selectBudget.split(' - ');
+                let minBudget = parseInt(budgetVal[0].replace('$', ''));
+                let maxBudget = parseInt(budgetVal[1].replace('$', ''));
+                budgetMatch = !isNaN(cardFindBudget) && cardFindBudget >= minBudget && cardFindBudget <= maxBudget;
+            }*/
 
-                /*
-                if((!isNaN(minBudget) && !isNaN(maxBudget)) && (cardFindBudget >= minBudget && cardFindBudget <= maxBudget)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                } */
+            // Show or hide the card based on filter matches
+            if (locationMatch && propertyTypeMatch && buyRentMatch && roomsMatch && budgetMatch) {
+                card.show();
+            } else {
+                card.hide();
+            }
+        });
 
-                if((regexLocation.test(cardFindLocation)) || (regexPropertyType.test(cardFindPropertyType)) || (regexBuyRent.test(cardFindBuyRent)) || (regexRooms.test(cardFindRooms))) {
-                    $(this).show();
-                    $('.select2').val(null).trigger('change');
-                } else {
-                    $(this).hide();
-                    $('.select2').val(null).trigger('change');
-                }
-            })
-        }
+        // Reset all Select2 dropdowns
+        $('.select2').val(null).trigger('change');
     });
+
+    // Reset button click event
     $('#resetButton').on('click', function() {
         $('.card').show();
         $('.select2').val(null).trigger('change');
