@@ -1,14 +1,16 @@
 /* CSS Code goes here */
-.navbar{
-    padding-bottom: 20%;
-}
+
 .navbar .navbar-brand, .nav-link,
 .title_filters, .nav-link:hover,
 .nav-link:focus, .card-body{
     color: #333333;
 }
-
-
+.no-underline {
+    text-decoration: none; /* Removes underline from links with this class */
+}
+.navbar{
+    padding-bottom: 20%;
+}
 .btn{
     background: none;
     color: #333333;
@@ -24,8 +26,9 @@
     color: #333333;
 }
 
-.get_started{
+.get-started{
     padding-bottom: 19%;
+
 }
 .dashboard{
     background-image: url('pic/background_dashboard.jpg');
@@ -42,19 +45,31 @@
     z-index: 10; /* Bring this container to the front */
 }
 
-
-/* CSS Code goes here */
 #cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-.card {
-    width: 68%;
-    margin: 0 1rem 1rem 0;
+
+.card-title{
+    cursor: pointer;
 }
 .card-descr{
-    padding-bottom:11%
+    padding-bottom:32%
+}
+.card-text{
+    font-size: 1.2rem;
+}
+.card-text-subtitle{
+    font-size: 0.9rem;
+}
+.card {
+    width: 95%;
+    margin: 0 1rem 1rem 0;
+}
+.card-hidden {
+ /*display: none;*/
+
 }
 #filtering-box {
     display: flex;
@@ -64,4 +79,26 @@
 .filtering-box {
     width: 18rem;
     margin: 0 1rem 1rem 0;
+}
+
+.scrollable-container{
+    /* height: 100vh; TODO: do we want this part scrollable??
+     overflow-y: auto;*/
+}
+
+.contact-box{
+        border: solid 1px #333333;
+        border-radius: 5px;
+}
+
+.contact-message{
+    padding-bottom:6rem;
+}
+.form-control{
+    font-size: 0.9rem
+}
+
+.footer{
+    background-color: #333333;
+    color: #fff;
 }
