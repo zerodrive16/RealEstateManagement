@@ -5,13 +5,13 @@ $(document).ready(function() {
     // hide the cards when filter active
     $('#searchButton').on('click', function() {
         // filter for location
-        if($('#location').val() || $('#Property-type').val() || $('#Buy-Rent').val() || $('#Rooms').val() || $('#Budget').val()) {
+        if($('#location').val() || $('#propertyType').val() || $('#tenureType').val() || $('#rooms').val() || $('#budget').val()) {
 
             // get values
             let selectLocation = $('#location').val();
-            let selectPropertyType = $('#Property-type').val();
-            let selectBuyRent = $('#Buy-Rent').val();
-            let selectRooms = $('#Rooms').val();
+            let selectPropertyType = $('#propertyType').val();
+            let selectBuyRent = $('#tenureType').val();
+            let selectRooms = $('#rooms').val();
 
             // create the regex pattern
             let regexLocation = new RegExp(selectLocation, 'gi');
