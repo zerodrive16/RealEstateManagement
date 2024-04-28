@@ -78,7 +78,7 @@ $(document).ready(function() {
         let budget = [];
 
         for(let i = 0; i <= 10000; i += 200) {
-            budget.push(`${i} - ${i+199}`);
+            budget.push(`$${i} - $${i+199}`);
         }
         budget.pop();
 
