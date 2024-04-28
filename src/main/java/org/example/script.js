@@ -1,4 +1,3 @@
-// JavaScript code goes here
 $(document).ready(function() {
     // select 2 activation
     $('.select2').select2();
@@ -28,14 +27,16 @@ $(document).ready(function() {
 
                 if((regexLocation.test(cardFindLocation)) || (regexPropertyType.test(cardFindPropertyType)) || (regexBuyRent.test(cardFindBuyRent)) || (regexRooms.test(cardFindRooms))) {
                     $(this).show();
+                    $('.select2').val(null).trigger('change');
                 } else {
                     $(this).hide();
+                    $('.select2').val(null).trigger('change');
                 }
             })
         }
     });
-
-    $('#budgetRange').on('input', function() {
-        $('#selectedBudget').text($(this).val());
+    $('#resetButton').on('click', function() {
+        $('.card').show();
+        $('.select2').val(null).trigger('change');
     });
 });
