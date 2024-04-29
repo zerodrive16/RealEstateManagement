@@ -5,7 +5,7 @@ $(document).ready(function() {
             "Berlin", "Frankfurt am Main", "Bonn", "Munich", "Stuttgart", "Bremen", "Dresden", "Hanover", "Nuremberg", "Duisberg", "Bochum",
             "Cologne", "Düsseldorf", "Leipzig", "Essen", "Bochum", "Wiesbaden", "Aachen", "Kiel", "Braunschweig", "Augsburg", "Münster", "Halle",
             "Erfurt", "Oberhausen", "Rostock", "Lübeck", "Magdeburg", "Chemnitz", "Hamm", "Kassel", "Hagen", "Oldenburg", "Osnabrück",
-            "Eschborn", "Aschaffenburg" // add more...
+            "Eschborn", "Aschaffenburg", "Bad Homburg" // add more...
         ];
 
         cities.forEach(function(city) {
