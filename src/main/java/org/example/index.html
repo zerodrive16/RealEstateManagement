@@ -20,24 +20,26 @@
             <a class="navbar-brand col-md-9" href="#">Real Estate Management</a>
             <ul class="nav nav-underline">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Über uns</a>
+                    <a class="nav-link" aria-current="page" href="#footer">Über uns</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kontakt</a>
+                    <a class="nav-link" href="#footer">Kontakt</a>
                 </li>
             </ul>
             <button type="button" class="log-in btn btn-outline-secondary col-md-1">Log in</button>
         </div>
     </nav>
-    <div class="get_started row justify-content-center">
-        <button type="button" class="btn btn-outline-secondary col-md-1">Get started</button>
-    </div>
+
+        <a href="#get-started" class="get-started no-underline row justify-content-center" >
+            <button type="button" class="btn btn-outline-secondary col-md-1">Get started</button>
+        </a>
+
 </div>
 <!-- Needs to be loaded bfr js -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Filters Container-->
-<div class="main-container container-fluid p-0">
+<div id="get-started" class="main-container container-fluid p-0">
     <h4 class="title_filters col-md-12 px-4 pt-3">Search for available properties</h4>
     <!-- Filtering -->
     <div class="py-3">
@@ -63,90 +65,175 @@
             </select>
 
             <!-- Button -->
-            <button type="button" class="btn btn-secondary" name="Reset" id="resetButton">Reset</button>
+            <button type="button" class="button-search btn btn-outline-secondary col-md-1" name="Reset" id="resetButton">Reset</button>
             <button type="button" class="button-search btn btn-outline-secondary col-md-1" name="Search" id="searchButton" >Search</button>
         </div>
-        <!-- example card -->
-        <div class="container-fluid">
-            <div class="card mb-3 mx-4">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="pic/apartment1.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title pb-2">Southend</h5>
-                            <div class="location-container d-flex align-items-center pb-2">
-                                <img src="pic/location_icon.png" class="img-fluid rounded-start" alt="...">
-                                <h6 class="card-subtitle text-body-secondary ">Frankfurt am Main (Apartment, Rent)</h6>
+        <!-- Cards-->
+        <div class="container-fluid d-flex">
+            <!-- Horizontal Cards -->
+            <div class="horizontal-card container-fluid">
+                <div class="card mb-3 mx-4" id="hcard1">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="pic/apartment1.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title pb-2">Southend</h5>
+                                <div class="location-container d-flex align-items-center pb-2">
+                                    <img src="pic/location_icon.png" class="img-fluid rounded-start" alt="...">
+                                    <h6 class="card-subtitle text-body-secondary ">Frankfurt am Main (Apartment,
+                                        Rent)</h6>
+                                </div>
+                                <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
+                                <div class="row-card-properties d-flex">
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">$2800</p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">80m²</p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">2 Rooms</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
-                            <div class="row-card-properties d-flex">
-                                <div class="col-md-4 col-sm-9">
-                                    <p class="card-text">$2850</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Horizontal Card 2 -->
+                <div class=" card mb-3 mx-4" id="hcard2">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="pic/apartment1.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title pb-2">Westend</h5>
+                                <div class="location-container d-flex align-items-center pb-2">
+                                    <img src="pic/location_icon.png" class="img-fluid rounded-start" alt="...">
+                                    <h6 class="card-subtitle text-body-secondary ">Eschborn (Share Apartment, Rent)</h6>
                                 </div>
-                                <div class="col-md-4 col-sm-9">
-                                    <p class="card-text">80m²</p>
+                                <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
+                                <div class="row-card-properties d-flex">
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">$2800</p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">80m²</p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">3 Rooms</p>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-sm-9">
-                                    <p class="card-text">2 Rooms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Horizontal Card 3 -->
+                <div class="card mb-3 mx-4" id="hcard3">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="pic/apartment1.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title pb-2">Northend</h5>
+                                <div class="location-container d-flex align-items-center pb-2">
+                                    <img src="pic/location_icon.png" class="img-fluid rounded-start" alt="...">
+                                    <h6 class="card-subtitle text-body-secondary ">Aschaffenburg (House, Buy)</h6>
+                                </div>
+                                <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
+                                <div class="row-card-properties d-flex">
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">$2800</p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">80m²</p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-9">
+                                        <p class="card-text">3 Rooms</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="card mb-3 mx-4">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="pic/apartment1.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
+            <!-- Vertical Card -->
+            <div class="vertical-card scrollable-container container-fluid col-md-4 p-0 g-0">
+                <div class="card-hidden card m-0" id="vcard1">
+                    <div class="row g-0">
+                        <img src="pic/apartment2.jpg" class="card-img-top" alt="Card image">
                         <div class="card-body">
-                            <h5 class="card-title pb-2">Westend</h5>
-                            <div class="location-container d-flex align-items-center pb-2">
-                                <img src="pic/location_icon.png" class="img-fluid rounded-start" alt="...">
-                                <h6 class="card-subtitle text-body-secondary ">Eschborn (Share Apartment, Rent)</h6>
-                            </div>
-                            <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
-                            <div class="row-card-properties d-flex">
-                                <div class="col-md-4 col-sm-9">
-                                    <p class="card-text">$2800</p>
-                                </div>
-                                <div class="col-md-4 col-sm-9">
-                                    <p class="card-text">80m²</p>
-                                </div>
-                                <div class="col-md-4 col-sm-9">
-                                    <p class="card-text">2 Rooms</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3 mx-4">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="pic/apartment1.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title pb-2">Northend</h5>
-                            <div class="location-container d-flex align-items-center pb-2">
+                            <h5 class="card-title">Westend</h5>
+                            <div class="location-container d-flex align-items-center pb-5">
                                 <img src="pic/location_icon.png" class="img-fluid rounded-start" alt="...">
                                 <h6 class="card-subtitle text-body-secondary ">Aschaffenburg (House, Buy)</h6>
                             </div>
-                            <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
                             <div class="row-card-properties d-flex">
                                 <div class="col-md-4 col-sm-9">
-                                    <p class="card-text">$2800</p>
+                                    <p class="card-text">2800  €/Monat</p>
                                 </div>
                                 <div class="col-md-4 col-sm-9">
                                     <p class="card-text">80m²</p>
                                 </div>
                                 <div class="col-md-4 col-sm-9">
-                                    <p class="card-text">2 Rooms</p>
+                                    <p class="card-text">3 Rooms</p>
+                                </div>
+                            </div>
+                            <div class="row-card-properties d-flex pb-4">
+                                <div class="col-md-4 col-sm-9">
+                                    <p class="card-text card-text-subtitle">Warmmiete</p>
+                                </div>
+                                <div class="col-md-4 col-sm-9">
+                                    <p class="card-text card-text-subtitle">Wohnfläche ca.</p>
+                                </div>
+                                <div class="col-md-4 col-sm-9">
+                                    <p class="card-text card-text-subtitle">Zimmer</p>
+                                </div>
+                            </div>
+                            <h5>Beschreibung</h5>
+                            <p class="card-info">Frei ab 01.06.2024</p>
+                            <p class="card-info pb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+
+                            <div class="contact-box  container p-2">
+                                <h5 class="contact-title row justify-content-center py-3">Anbieter kontaktieren</h5>
+                                <div class="row">
+                                    <form class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="p-2" for="Vorname">Vorname*</label>
+                                            <input type="text" class="form-control" id="Vorname" placeholder="Vorname">
+                                        </div>
+                                    </form>
+                                    <form class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="p-2" for="Nachname">Nachname*</label>
+                                            <input type="text" class="form-control" id="Nachname"
+                                                   placeholder="Nachname">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <form class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="p-2" for="Email">Email Address*</label>
+                                            <input type="text" class="form-control" id="Email"
+                                                   placeholder="email@example.com">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row pb-4">
+                                    <form class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="p-2" for="Nachricht">Ihre Nachricht </label>
+                                            <input type="text" class="form-control contact-message" id="Nachricht" placeholder="Nachricht">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row justify-content-center ">
+                                    <button type="button" class="btn btn-outline-secondary col-md-4 ">Absenden</button>
                                 </div>
                             </div>
                         </div>
@@ -154,16 +241,50 @@
                 </div>
             </div>
         </div>
-
     </div>
+</div>
 
+<!-- Footer Section -->
+<footer id="footer" class="footer mt-5 p-4">
+    <div class="container-fluid g-0">
+        <div class="row justify-content-center">
+            <!-- Column 1: Über uns -->
+            <div class="col-md-4">
+                <h5>Über uns</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel eros ligula.</p>
+            </div>
+            <!-- Column 2: Unterstützung -->
+            <div class="col-md-4">
+                <h5>Unterstützung</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white no-underline ">Hilfe</a></li>
+                    <li><a href="#" class="text-white no-underline ">Kontakt</a></li>
+                </ul>
+            </div>
+            <!-- Column 3: Kontakt -->
+            <div class="col-md-4">
+                <h5>Kontakt</h5>
+                <p>
+                    123 Main Street<br>
+                    City, State 12345<br>
+                    Email: <a href="mailto:info@example.com" class="text-white">info@example.com</a><br>
+                    Phone: (123) 456-7890
+                </p>
+            </div>
+        </div>
+        <!-- Footer bottom section (optional) -->
+        <div class="text-center">
+            &copy; 2024 Real Estate Management
+        </div>
     </div>
-    <!-- JavaScript Script -->
-    <script src="JavaScript/dropdownFunctions.js"></script>
-    <script src="JavaScript/buttonFunctions.js"></script>
-    <!-- Links to Bootstrap assets -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Select2 assets -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</footer  >
+<!-- JavaScript Script -->
+<script src="JavaScript/dropdownFunctions.js"></script>
+<script src="JavaScript/buttonFunctions.js"></script>
+<!-- Links to Bootstrap assets -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Select2 assets -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 </body>
 </html>
