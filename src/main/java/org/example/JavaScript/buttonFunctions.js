@@ -47,10 +47,14 @@ $(document).ready(function() {
                 card.hide();
             }
         });
+
+        // Reset all Select2 dropdowns
+        $('.select2').val(null).trigger('change');
     });
 
     // Reset button click event
     $('#resetButton').on('click', function() {
         $('.card').show();
+        $('.select2').val(null).trigger('change');
     });
 });
