@@ -57,4 +57,5 @@ $(document).ready(function() {
         $('.card').show();
         $('.select2').val(null).trigger('change');
     });
+    
 });
