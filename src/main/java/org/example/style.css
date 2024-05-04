@@ -25,7 +25,10 @@
     background: none;
     color: #333333;
 }
-
+.login-container{
+    width: 100px;
+    height: 100px;
+}
 .get-started{
     padding-bottom: 19%;
 
@@ -36,6 +39,22 @@
     background-position: center;
     position: relative; /* Establish positioning context */
 
+}
+
+.custom-input {
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #ccc; /* Add only a bottom border */
+    border-radius: 0;
+    outline: none; /* Remove default focus outline */
+}
+
+/* Optional: Change color of the bottom border on focus */
+.custom-input:focus {
+    border-bottom-color: #007bff; /* Change color to blue (Bootstrap primary color) on focus */
+}
+
+.modal-footer {
+border: none;
 }
 
 .main-container {
