@@ -37,7 +37,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content text-center d-flex align-items-center justify-content-center">
                         <div class="mb-3 modal-header container d-flex justify-content-between align-items-center">
-                            <h5 class="modal-title col-11" id="exampleModalLabel">Log In</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
                             <!-- Close button -->
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -45,21 +45,24 @@
                             <form>
                                 <div class="mb-4 container d-flex col-12 pb-4">
                                     <span>
-                                        <img class="" alt="Icon" height="20" src="pic/username.png" width="20">
+                                        <img class="" alt="Icon" src="pic/username.png" >
                                     </span>
                                     <input class="form-control custom-input " placeholder="Username" type="text">
                                 </div>
                                 <div class="mb-3 container d-flex col-12">
                                     <span>
-                                        <img class="" alt="Icon" height="20" src="pic/password.png" width="20">
+                                        <img class="" alt="Icon" src="pic/password.png" >
                                     </span>
                                     <input class="form-control custom-input" placeholder="Password" type="password">
                                 </div>
-
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button class="log-in btn btn-outline-secondary px-5" type="button">Log In</button>
+                        <div class="modal-footer container d-flex justify-content-center p-0">
+                            <button class="log-in btn btn-outline-secondary px-5 mb-3" type="button">Log In</button>
+                            <div class="create-account col-12 justify-content-start py-2">
+                                Don’t have an account?
+                                <a class="link active" href="#">Create one</a>
+                            </div>
                         </div>
                     </div>
                 </div>

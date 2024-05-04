@@ -56,7 +56,13 @@
 .modal-footer {
 border: none;
 }
-
+.create-account{
+    font-size:12px;
+    border-top: 1px solid #ccc;
+}
+.link{
+    text-decoration:none;
+}
 .main-container {
     background-color: #ffffff95;
     position: relative; /* Move this container up */
