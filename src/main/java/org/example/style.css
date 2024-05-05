@@ -25,10 +25,7 @@
     background: none;
     color: #333333;
 }
-.login-container{
-    width: 100px;
-    height: 100px;
-}
+
 .get-started{
     padding-bottom: 19%;
 
@@ -60,9 +57,7 @@ border: none;
     font-size:12px;
     border-top: 1px solid #ccc;
 }
-.link{
-    text-decoration:none;
-}
+
 .main-container {
     background-color: #ffffff95;
     position: relative; /* Move this container up */
