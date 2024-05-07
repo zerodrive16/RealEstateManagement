@@ -16,7 +16,6 @@ $(document).ready(function() {
         });
     }
     createLocationDropdown();
-    $(document).on('change', '#location', createLocationDropdown);
 
 
     // Dropdown for the Property Types
@@ -34,7 +33,6 @@ $(document).ready(function() {
         });
     }
     createPropertyTypeDropdown();
-    $(document).on('change', '#propertyType', createPropertyTypeDropdown);
 
 
     // Dropdown for the Tenure Type
@@ -51,7 +49,6 @@ $(document).ready(function() {
         });
     }
     createTenureTypeDropdown();
-    $(document).on('change', '#tenureType', createTenureTypeDropdown);
 
 
     // Dropdown for Rooms
@@ -70,7 +67,6 @@ $(document).ready(function() {
         });
     }
     createRoomsDropdown();
-    $(document).on('change', '#rooms', createRoomsDropdown);
 
 
     // Dropdown for Budget
@@ -90,5 +86,4 @@ $(document).ready(function() {
         });
     }
     createBudgetDropdown();
-    $(document).on('change', '#budget', createBudgetDropdown);
 });

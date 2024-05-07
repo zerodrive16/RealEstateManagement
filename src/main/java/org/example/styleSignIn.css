@@ -1,0 +1,72 @@
+/* CSS Code goes here */
+
+.navbar .navbar-brand, .nav-link,
+.title_filters, .nav-link:hover,
+.nav-link:focus, .card-body{
+    color: #333333;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #fff;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.btn{
+    background: none;
+    color: #333333;
+}
+
+.btn:hover{
+    background-color: #333333;
+    border: #333333;
+    color: #fff;
+}
+
+
+
+.custom-input {
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #ccc; /* Add only a bottom border */
+    border-radius: 0;
+    outline: none; /* Remove default focus outline */
+}
+
+/* Optional: Change color of the bottom border on focus */
+.custom-input:focus {
+    border-bottom-color: #007bff; /* Change color to blue (Bootstrap primary color) on focus */
+}
+.sing-in-container{
+    border-right: 1px solid #ccc;
+}
+
+.label-radionbox{
+    display: inline-block;
+}
+.form-control{
+    font-size: 0.9rem
+}
+.form-group{
+    padding-bottom: 1rem;
+}
+
+.sing-in-picture{
+    background-image: url('pic/background_dashboard.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.privacy-notice, .extisting-account{
+    font-size:12px;
+}
+.footer{
+    background-color: #333333;
+    color: #fff;
+
+}

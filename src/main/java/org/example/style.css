@@ -38,6 +38,26 @@
 
 }
 
+.custom-input {
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #ccc; /* Add only a bottom border */
+    border-radius: 0;
+    outline: none; /* Remove default focus outline */
+}
+
+/* Optional: Change color of the bottom border on focus */
+.custom-input:focus {
+    border-bottom-color: #007bff; /* Change color to blue (Bootstrap primary color) on focus */
+}
+
+.modal-footer {
+border: none;
+}
+.create-account{
+    font-size:12px;
+    border-top: 1px solid #ccc;
+}
+
 .main-container {
     background-color: #ffffff95;
     position: relative; /* Move this container up */

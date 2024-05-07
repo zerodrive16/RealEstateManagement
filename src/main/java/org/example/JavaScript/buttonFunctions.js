@@ -9,7 +9,7 @@ $(document).ready(function() {
         let selectPropertyType = $('#propertyType').val();
         let selectBuyRent = $('#tenureType').val();
         let selectRooms = $('#rooms').val();
-        //let selectBudget = $('#budget').val();
+        let selectBudget = $('#budget').val();
 
         // create ReGeX pattern
         let regexLocation = new RegExp(selectLocation, 'gi');
@@ -24,21 +24,21 @@ $(document).ready(function() {
             let cardFindPropertyType = card.find('.card-subtitle').text();
             let cardFindBuyRent = card.find('.card-subtitle').text();
             let cardFindRooms = card.find('.card-text').text();
-            //let cardFindBudget = parseInt(card.find('.card-text').text().replace('$', ''));
+            let cardFindBudget = parseInt(card.find('.card-text').text().replace('$', ''));
 
             // Check if card matches all selected criteria
             let locationMatch = !selectLocation || regexLocation.test(cardFindLocation);
             let propertyTypeMatch = !selectPropertyType || regexPropertyType.test(cardFindPropertyType);
             let buyRentMatch = !selectBuyRent || regexBuyRent.test(cardFindBuyRent);
             let roomsMatch = !selectRooms || regexRooms.test(cardFindRooms);
-            //let budgetMatch = true; // Always true if budget is not selected
+            let budgetMatch = true; // Always true if budget is not selected
 
-            /*if (selectBudget) {
+            if (selectBudget) {
                 let budgetVal = selectBudget.split(' - ');
                 let minBudget = parseInt(budgetVal[0].replace('$', ''));
                 let maxBudget = parseInt(budgetVal[1].replace('$', ''));
                 budgetMatch = !isNaN(cardFindBudget) && cardFindBudget >= minBudget && cardFindBudget <= maxBudget;
-            }*/
+            }
 
             // Show or hide the card based on filter matches
             if (locationMatch && propertyTypeMatch && buyRentMatch && roomsMatch && budgetMatch) {
