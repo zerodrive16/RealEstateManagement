@@ -1,7 +1,7 @@
 package org.example.JDBC;
 
 
-import org.example.JDBC.DataStorage;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
