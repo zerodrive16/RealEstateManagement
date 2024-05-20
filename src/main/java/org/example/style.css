@@ -114,6 +114,27 @@ border: none;
 .contact-message{
     padding-bottom:6rem;
 }
+
+.pagination {
+  justify-content: center;
+}
+
+.page-item.page-link {
+  color: #007bff;
+}
+
+.page-item.active.page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.pagination {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 .form-control{
     font-size: 0.9rem
 }
