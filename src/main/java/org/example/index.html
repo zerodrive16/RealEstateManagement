@@ -13,26 +13,37 @@
     <!-- Stylesheet CSS links -->
     <link href="style.css" rel="stylesheet">
 </head>
-<!-- TODO: Java object relational mapping(orm tool) -> no djbs -->
 <body>
 <div class="bg dashboard container-fluid">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex ">
             <a class="navbar-brand col-md-9" href="#">Real Estate Management</a>
-            <ul class="nav nav-underline">
-                <li class="nav-item">
-                    <a aria-current="page" class="nav-link" href="#footer">Über uns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#footer">Kontakt</a>
-                </li>
-            </ul>
 
-            <button class="log-in btn btn-outline-secondary col-md-1" data-bs-target="#exampleModal"
-                    data-bs-toggle="modal"
-                    type="button">Anmelden
+            <!-- Hamburger Icon (Collapsed Navbar) -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navbar Items (Collapsible) -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="#footer">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="log-in btn btn-outline-secondary" data-bs-target="#exampleModal"
+                                data-bs-toggle="modal"
+                                type="button">Anmelden
+                        </button>
+                    </li>
+                    <!-- Add more navbar items as needed -->
+                </ul>
+            </div>
+
             <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal"
                  tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
@@ -70,17 +81,22 @@
             </div>
         </div>
     </nav>
-    <a class="get-started no-underline row justify-content-center" href="#get-started">
-        <button class="btn btn-outline-secondary col-md-1" type="button">Get started</button>
-    </a>
+    <div class="row justify-content-center">
+        <a class="get-started no-underline" href="#get-started">
+            <button class="btn btn-outline-secondary" type="button">Get started</button>
+        </a>
+    </div>
 </div>
 <!-- Needs to be loaded bfr js -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Filters Container-->
 <div class="main-container container-fluid p-0" id="get-started">
     <h4 class="title_filters col-md-12 px-4 pt-3">Search for available properties</h4>
+
+
+
+
     <!-- Filtering -->
-    <!-- TODO: look at the js dropdowm with option, you can ad -->
     <div class="py-3">
         <div class="d-flex align-items-center justify-content-between shadow-sm pb-4 px-4 mb-4" id="filtering-box">
             <select class="form-select select2" id="location" style="width: 200px;">
@@ -130,13 +146,13 @@
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
                                 <div class="row-card-properties d-flex">
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4 ">
                                         <p class="card-text">80m²</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">2 Rooms</p>
                                     </div>
                                 </div>
@@ -159,13 +175,13 @@
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
                                 <div class="row-card-properties d-flex">
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">80m²</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">3 Rooms</p>
                                     </div>
                                 </div>
@@ -188,13 +204,13 @@
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
                                 <div class="row-card-properties d-flex">
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4 ">
                                         <p class="card-text">$2800</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">80m²</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">3 Rooms</p>
                                     </div>
                                 </div>
@@ -217,13 +233,13 @@
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
                                 <div class="row-card-properties d-flex">
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">80m²</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">3 Rooms</p>
                                     </div>
                                 </div>
@@ -246,13 +262,13 @@
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
                                 <div class="row-card-properties d-flex">
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">80m²</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">3 Rooms</p>
                                     </div>
                                 </div>
@@ -275,13 +291,13 @@
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
                                 <div class="row-card-properties d-flex">
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">80m²</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-9">
+                                    <div class="col-md-4">
                                         <p class="card-text">3 Rooms</p>
                                     </div>
                                 </div>
@@ -427,6 +443,9 @@
 </footer>
 
 <!-- JavaScript Script -->
+<!-- Bootstrap JavaScript (required for toggling the collapsed navbar) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
 <script src="JavaScript/dropdownFunctions.js"></script>
 <script src="JavaScript/buttonFunctions.js"></script>

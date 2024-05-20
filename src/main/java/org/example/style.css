@@ -11,6 +11,13 @@
 .navbar{
     padding-bottom: 20%;
 }
+
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
 .btn{
     background: none;
     color: #333333;
@@ -28,6 +35,7 @@
 
 .get-started{
     padding-bottom: 19%;
+    width: fit-content;
 
 }
 .dashboard{
@@ -87,8 +95,14 @@ border: none;
     width: 95%;
     margin: 0 1rem 1rem 0;
 }
-.card-hidden {
- /*display: none;*/
+.vertical-card {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .vertical-card {
+        display: block;
+    }
 
 }
 #filtering-box {
