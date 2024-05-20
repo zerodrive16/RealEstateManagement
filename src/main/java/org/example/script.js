@@ -36,21 +36,6 @@ $(document).ready(function() {
         let hasNextPage = false;
         let hasPreviousPage = false;
 
-        // Create Previous button if not on the first page
-        if (currentPage > 1) {
-            const prevLink = document.createElement('a');
-            prevLink.className = 'page-link';
-            prevLink.href = '#';
-            prevLink.setAttribute('aria-label', 'Previous');
-            prevLink.innerHTML = '<span aria-hidden="true">&laquo;</span>';
-            prevLink.onclick = function() { updatePagination(currentPage - 1); };
-            const prevItem = document.createElement('li');
-            prevItem.className = 'page-item';
-            prevItem.appendChild(prevLink);
-            ul.appendChild(prevItem);
-            hasPreviousPage = true;
-        }
-
         // Loop through pages
         for (let i = 1; i <= totalPages; i++) {
             const link = document.createElement('a');
@@ -63,21 +48,6 @@ $(document).ready(function() {
             item.className = 'page-item';
             item.appendChild(link);
             ul.appendChild(item);
-        }
-
-        // Create Next button if not on the last page
-        if (currentPage < totalPages) {
-            const nextLink = document.createElement('a');
-            nextLink.className = 'page-link';
-            nextLink.href = '#';
-            nextLink.setAttribute('aria-label', 'Next');
-            nextLink.innerHTML = '<span aria-hidden="true">&raquo;</span>';
-            nextLink.onclick = function() { updatePagination(currentPage + 1); };
-            const nextItem = document.createElement('li');
-            nextItem.className = 'page-item';
-            nextItem.appendChild(nextLink);
-            ul.appendChild(nextItem);
-            hasNextPage = true;
         }
 
         pagination.appendChild(ul);

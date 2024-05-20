@@ -1,8 +1,10 @@
+let imageCache = [];
+
 function httpRequest() {
 
     const apiKey = "7nQ9HYoAbyT-q5_NATX7MiRYH2-oYnJSCXAmLL9Ibq4";
-    const category = "real-estates";
-    const apiURL = `https://api.unsplash.com/photos/random?query=${category}&client_id=${apiKey}`;
+    const category = "house,home exterior,property,estate";
+    const apiURL = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(category)}&client_id=${apiKey}`;
 
     fetch(apiURL).then(response => {
         if(!response.ok) {
