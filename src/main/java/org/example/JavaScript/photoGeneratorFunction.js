@@ -1,6 +1,6 @@
 let imageCache = [];
 
-// Load image cache from localStorage
+// if item exists in localstorage fetch it
 if (localStorage.getItem('imageCache')) {
     imageCache = JSON.parse(localStorage.getItem('imageCache'));
 }
@@ -24,7 +24,7 @@ function httpRequest() {
             // Push image to cache (array)
             imageCache.push(data);
 
-            // Save updated cache to localStorage
+            // store item in localstorage
             localStorage.setItem('imageCache', JSON.stringify(imageCache));
 
             displayImage(data);
