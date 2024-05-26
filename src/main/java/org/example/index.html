@@ -17,21 +17,22 @@
 <div class="bg dashboard container-fluid">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex ">
-            <a class="navbar-brand col-md-9" href="#">Real Estate Management</a>
-
-            <div class="menu-btn" id="menuBtn">&#9776;</div>
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand m-0" href="#">Real Estate Management</a>
+            <div class="menu-btn" id="menuBtn">
+                <img src="pic/hamburger_menu.png">
+            </div>
             <div id="overlay"></div>
             <!-- Navbar Items (Collapsible) -->
             <div class="side-menu justify-content-end" id="sideMenu">
                 <ul class="navbar-nav ">
-                    <li class="nav-item">
+                    <li class="nav-item px-1">
                         <a aria-current="page" class="nav-link" href="#footer">Über uns</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item px-1">
                         <a class="nav-link" href="#footer">Kontakt</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item px-1">
                         <button id="loginButton" class="log-in btn btn-outline-secondary" data-bs-target="#exampleModal"
                                 data-bs-toggle="modal"
                                 type="button"
@@ -68,7 +69,7 @@
                             </form>
                         </div>
                         <div class="modal-footer container d-flex justify-content-center p-0">
-                            <button class="log-in btn btn-outline-secondary px-5 mb-3" type="button">Anmelden</button>
+                            <button class="log-in btn btn-outline-secondary px-5 mb-3" type="button" onclick="goToMainPage()">Anmelden</button>
                             <div class="create-account col-12 justify-content-start py-2">
                                 Sie haben noch kein Konto?
                                 <a class="no-underline active" href="indexSingIn.html">Erstelle einen</a>
@@ -89,14 +90,16 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Filters Container-->
 <div class="main-container container-fluid p-0" id="get-started">
-    <h4 class="title_filters col-md-12 px-4 pt-3">Search for available properties</h4>
-
-
-
+    <div class="container filters-header m-0 " >
+        <h4 class="title_filters col-md-12 col-10 px-3 pt-3 ">Search for available properties</h4>
+        <div class="menu-btn-filter px-4 col-2" id="menuBtnFilter">
+            <img src="pic/filter.png">
+        </div>
+    </div>
 
     <!-- Filtering -->
-    <div class="py-3">
-        <div class="filtering-box align-items-center justify-content-between shadow-sm pb-4 px-4 mb-4" id="filtering-box">
+    <div class="pb-3">
+        <div class="filtering-box align-items-center justify-content-between shadow-sm mb-4" id="filtering-box">
             <select class="form-select select2" id="location" style="width: 200px;">
                 <option disabled selected style="text-align: center;" value="">Select a Location</option>
             </select>
@@ -118,10 +121,10 @@
             </select>
 
             <!-- Button -->
-            <button class="button-search btn btn-outline-secondary col-md-1" id="resetButton" name="Reset"
+            <button class="button-search btn btn-outline-secondary col-md-1 col-7" id="resetButton" name="Reset"
                     type="button">Reset
             </button>
-            <button class="button-search btn btn-outline-secondary col-md-1" id="searchButton" name="Search"
+            <button class="button-search btn btn-outline-secondary col-md-1 col-7" id="searchButton" name="Search"
                     type="button">Search
             </button>
         </div>
@@ -129,7 +132,7 @@
         <div class="container-fluid d-flex">
             <!-- Horizontal Cards -->
             <div class="horizontal-card container-fluid" id="data-container">
-                <div class="card mb-3 mx-4" id="hcard1">
+                <div class="card mb-3" id="hcard1">
                     <div class="row g-0">
                         <div class="col-md-6">
                             <img alt="..." class="img-fluid rounded-start" src="pic/apartment1.jpg">
@@ -143,7 +146,7 @@
                                         Rent)</h6>
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
-                                <div class="row-card-properties d-flex">
+                                <div class="row-card-properties d-flex justify-content-between">
                                     <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
@@ -159,7 +162,7 @@
                     </div>
                 </div>
                 <!-- Horizontal Card 2 -->
-                <div class=" card mb-3 mx-4" id="hcard2">
+                <div class=" card mb-3" id="hcard2">
                     <div class="row g-0">
                         <div class="col-md-6">
                             <div id="apiTest"></div>
@@ -172,7 +175,7 @@
                                     <h6 class="card-subtitle text-body-secondary ">Berlin (Share Apartment, Rent)</h6>
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
-                                <div class="row-card-properties d-flex">
+                                <div class="row-card-properties d-flex justify-content-between">
                                     <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
@@ -188,7 +191,7 @@
                     </div>
                 </div>
                 <!-- Horizontal Card 3 -->
-                <div class="card mb-3 mx-4" id="hcard3">
+                <div class="card mb-3" id="hcard3">
                     <div class="row g-0">
                         <div class="col-md-6">
                             <img alt="..." class="img-fluid rounded-start" src="pic/apartment1.jpg">
@@ -201,7 +204,7 @@
                                     <h6 class="card-subtitle text-body-secondary ">Aschaffenburg (House, Buy)</h6>
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
-                                <div class="row-card-properties d-flex">
+                                <div class="row-card-properties d-flex justify-content-between">
                                     <div class="col-md-4 ">
                                         <p class="card-text">$2800</p>
                                     </div>
@@ -217,7 +220,7 @@
                     </div>
                 </div>
                 <!-- Horizontal Card 3 -->
-                <div class="card mb-3 mx-4" id="hcard4">
+                <div class="card mb-3" id="hcard4">
                     <div class="row g-0">
                         <div class="col-md-6">
                             <img alt="..." class="img-fluid rounded-start" src="pic/apartment1.jpg">
@@ -230,7 +233,7 @@
                                     <h6 class="card-subtitle text-body-secondary ">Aschaffenburg (House, Buy)</h6>
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
-                                <div class="row-card-properties d-flex">
+                                <div class="row-card-properties d-flex justify-content-between">
                                     <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
@@ -246,7 +249,7 @@
                     </div>
                 </div>
                 <!-- Horizontal Card 3 -->
-                <div class="card mb-3 mx-4" id="hcard5">
+                <div class="card mb-3" id="hcard5">
                     <div class="row g-0">
                         <div class="col-md-6">
                             <img alt="..." class="img-fluid rounded-start" src="pic/apartment1.jpg">
@@ -259,7 +262,7 @@
                                     <h6 class="card-subtitle text-body-secondary ">Aschaffenburg (House, Buy)</h6>
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
-                                <div class="row-card-properties d-flex">
+                                <div class="row-card-properties d-flex justify-content-between">
                                     <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
@@ -275,7 +278,7 @@
                     </div>
                 </div>
                 <!-- Horizontal Card 3 -->
-                <div class="card mb-3 mx-4" id="hcard6">
+                <div class="card mb-3" id="hcard6">
                     <div class="row g-0">
                         <div class="col-md-6">
                             <img alt="..." class="img-fluid rounded-start" src="pic/apartment1.jpg">
@@ -288,7 +291,7 @@
                                     <h6 class="card-subtitle text-body-secondary ">Aschaffenburg (House, Buy)</h6>
                                 </div>
                                 <h6 class="card-descr px-2">Nice view, friendly neighborhood</h6>
-                                <div class="row-card-properties d-flex">
+                                <div class="row-card-properties d-flex justify-content-between">
                                     <div class="col-md-4">
                                         <p class="card-text">$2800</p>
                                     </div>
@@ -451,6 +454,7 @@
 <script src="JavaScript/hamburgerMenu.js"></script>
 <script src="JavaScript/sellerFunctions.js"></script>
 <script src="JavaScript/pagination.js"></script>
+<script src="JavaScript/reload.js"></script>
 <!-- Links to Bootstrap assets -->
 <script crossorigin="anonymous"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

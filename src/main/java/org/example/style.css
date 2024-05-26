@@ -57,10 +57,6 @@
     border-bottom-color: #007bff; /* Change color to blue (Bootstrap primary color) on focus */
 }
 
-.filter{
-    background-color: #fff;
-    z-index: 4;
-}
 
 .modal-footer {
     border: none;
@@ -80,7 +76,7 @@
     cursor: pointer;
 }
 .card-descr{
-    padding-bottom:32%
+    padding-bottom:30%;
 }
 .card-text{
     font-size: 1.2rem;
@@ -90,7 +86,7 @@
 }
 .card {
     width: 95%;
-    margin: 0 1rem 1rem 0;
+    margin: 0 1rem 1rem 1rem;
 }
 .vertical-card {
     display: none;
@@ -179,11 +175,11 @@
 
 }
 
-.menu-btn {
+.menu-btn, .menu-btn-filter {
     display: none;
     font-size: 30px;
     cursor: pointer;
-    z-index: 7;
+    z-index: 10;
 }
 
 .overlay {
@@ -209,10 +205,6 @@ body.no-scroll {
     overflow: hidden;
 }
 
-.side-menu.open {
-    right: 0;
-}
-
 .menu-btn.open {
     position: fixed;
     right: 1rem;
@@ -222,18 +214,33 @@ body.no-scroll {
     opacity: 1;
     visibility: visible;
 }
-/*
-.filtering-box.open-filters{
-    height: max-content;
-    transition: height 0.5s ease-in-out;
-    display: flex;
+
+.filters-header{
+    display:flex;
+    justify-content: space-between;
 }
-*/
+.filtering-box.open-filters{
+    height: 270px;
+    opacity: 1;
+}
+.side-menu.open {
+    right: 0;
+    opacity: 1;
+}
+@media (max-width: 1200px) {
+}
 @media (max-width: 767px) {
     .menu-btn {
         display: block;
         position: fixed;
         right: 1rem;
+    }
+    .menu-btn img {
+        max-width: 30px;
+    }
+    .menu-btn-filter{
+        display:inline;
+        z-index: 7;
     }
     .side-menu {
         padding: 4rem 0.5rem 0 1rem;
@@ -244,8 +251,9 @@ body.no-scroll {
         height: 100%;
         background: #fff;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-        transition: all 0.5s ease-in-out;
-        z-index: 6;
+        transition: right 0.6s ease-in-out, opacity 0.6s ease-in-out;
+        opacity: 0;
+        z-index: 8;
     }
     .side-menu ul li{
         justify-content: end;
@@ -261,18 +269,37 @@ body.no-scroll {
         background-color: unset;
         color: #333;
     }
-    /*
-    .filtering-box {
-        display: none;
-        height: 0;
-        transition: height 0.5s ease-in-out;
-    }
-    */
-}
 
+    .filtering-box {
+        opacity: 0;
+        height: 0;
+        transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        padding-left: 2rem;
+    }
+    .filtering-box span{
+        margin-bottom: 0.2rem;
+    }
+    .filtering-box button{
+        margin-bottom: 0.6rem;
+    }
+    .card-descr{
+        padding-bottom: 10%;
+    }
+    h6{
+        font-size:15px;
+    }
+    .title_filters{
+        font-size: 20px;
+    }
+}
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: unset;
+    }
+}
 @media (min-width: 768px) {
     .log-in{
-        margin: 0 1rem 0 1rem;
+        margin: 0 0 0 0.5rem;
     }
     .hamburger {
         display: none;
@@ -284,4 +311,14 @@ body.no-scroll {
     .menu-btn {
         display: none;
     }
+    .filtering-box {
+        padding: 0 2rem 1rem 2rem;
+    }
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
 }
+
