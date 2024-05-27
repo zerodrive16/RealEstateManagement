@@ -20,7 +20,6 @@ function httpRequest() {
             }
             return response.json();
         }).then(data => {
-            console.log(data);
             // Push image to cache (array)
             imageCache.push(data);
 
