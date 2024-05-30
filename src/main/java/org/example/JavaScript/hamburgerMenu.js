@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     menuBtnFilter.addEventListener('click', function () {
         filteringBox.classList.toggle('open-filters');
-        document.body.classList.toggle('no-scroll');
     });
 });
 
