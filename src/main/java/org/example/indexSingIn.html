@@ -150,6 +150,32 @@
         </div>
     </div>
 </footer>
+<script>
+    document.getElementById('signIn').onclick = function() {
+        var sellerRadio = document.getElementById('seller');
+        var buyerRadio = document.getElementById('buyer');
+        if(sellerRadio.checked) {
+            var aTagSeller = document.createElement('a');
+            aTagSeller.href = 'sellerPage.html';
+            aTagSeller.target = 'seller';
+            aTagSeller.style.display = 'none';
+
+            document.body.appendChild(aTagSeller);
+            aTagSeller.click();
+            document.body.removeChild(aTagSeller);
+
+        } else if(buyerRadio.checked) {
+            var aTagBuyer = document.createElement('a');
+            aTagBuyer.href = 'buyerPage.html';
+            aTagBuyer.target = 'buyer';
+            aTagBuyer.style.display = 'none';
+
+            document.body.appendChild(aTagBuyer);
+            aTagBuyer.click();
+            document.body.removeChild(aTagBuyer);
+        }
+    }
+</script>
 <!-- JavaScript Script -->
 <script src="JavaScript/hamburgerMenu.js"></script>
 <script src="JavaScript/reload.js"></script>
