@@ -1,4 +1,4 @@
-package org.example.JDBC;
+package org.ProgrammingExercise.JDBC;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
