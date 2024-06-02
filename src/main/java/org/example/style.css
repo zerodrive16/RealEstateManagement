@@ -38,11 +38,19 @@
 }
 
 .dashboard{
+    height: 100vh;
+    width: 100vw;
     background-image: url('pic/background_dashboard.jpg');
     background-size: cover;
     background-position: center;
     position: relative; /* Establish positioning context */
-
+}
+.dashboard-SP{
+    height: 80vh;
+    background-image: url('pic/background_dashboard.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Establish positioning context */
 }
 
 .custom-input {

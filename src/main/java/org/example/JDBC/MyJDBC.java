@@ -1,4 +1,4 @@
-package org.ProgrammingExercise.JDBC;
+package org.example.JDBC;
 
 
 import java.sql.Connection;
